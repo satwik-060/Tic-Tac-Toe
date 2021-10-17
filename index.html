@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tic Tac Toe</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Spartan', sans-serif;
+      }
+      body{
+          display : flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      #heading{
+          margin : 20px 0px;
+      }
+      .box{
+          border: 1px solid ;
+          width : 150px;
+          height : 150px;
+          transition :  0.5s;
+          cursor : pointer;
+          display : flex;
+          justify-content: center;
+          padding-top : 16px;
+        }
+        .box:hover{
+            background-color:rgb(236, 236, 236);
+        }
+        .tictactoecontainer{
+            display : grid;
+            grid-template-columns: auto auto auto;
+            justify-content:center;
+        }
+        .box-1{
+            border-left: none;
+            border-top : none;
+        }
+        .box-2{
+            border-top : none;
+        }
+        .box-3{
+            border-top : none;
+            border-right : none;
+        }
+        .box-4{
+            border-left : none;
+        }
+        .box-6{
+            border-right : none;
+        }
+        .box-7{
+            border-left : none;
+            border-bottom : none;
+        }
+        .box-8{
+            border-bottom : none;
+        }
+        .box-9{
+            border-bottom : none;
+            border-right : none;
+        }
+        .text{
+            font-size: 120px;
+        }
+        .details{
+            margin-top : 20px;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            height : 30vh;
+        }
+        #reset{
+            padding : 7px 20px;
+            background : black;
+            border : 1px black;
+            border-radius: 15px;
+            color : white;
+            margin-top : 10px;
+            cursor : pointer;
+        }
+        .imgbox img{
+            transition : 0.8s;
+        }
+        #reset:hover{
+            background : rgb(29, 29, 29);
+        }
+        @media screen and (max-width : 507px)
+        {
+            .box{
+                width : 100px;
+                height : 100px;
+            }
+            .text{
+                font-size : 80px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id = "heading">Play Tic Tac Toe</h1>
+    <div class="tictactoecontainer">
+        <div class="box box-1" id="1"><span class="text"></span></div>
+        <div class="box box-2" id="2"><span class="text"></span></div>
+        <div class="box box-3" id="3"><span class="text"></span></div>
+        <div class="box box-4" id="4"><span class="text"></span></div>
+        <div class="box box-5" id="5"><span class="text"></span></div>
+        <div class="box box-6" id="6"><span class="text"></span></div>
+        <div class="box box-7" id="7"><span class="text"></span></div>
+        <div class="box box-8" id="8"><span class="text"></span></div>
+        <div class="box box-9" id="9"><span class="text"></span></div>
+    </div>
+    <div class="details">
+        <div>
+            <span class="turn" id = "turntext">Turn of : X</span>
+        </div>
+        <button id="reset">Reset</button>
+        <div class="imgbox">
+            <img src="resources/excited.gif" alt="" style="width:0">
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
